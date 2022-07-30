@@ -1,0 +1,152 @@
+TOPIC : Functions
+
+Write a JavaScript function that returns a passed string with letters in alphabetical order.
+
+Example string : 'webmaster'
+
+Expected Output : 'abeemrstw'
+
+Assume punctuation and numbers symbols are not included in the passed string.
+Ans.)<script>
+  function alpha(str) {
+    var arr = str.split(""); // splits the string
+    res = arr.sort().join(""); // sort the array and joins to form a string
+    return res; // returns the result
+  }
+  console.log("taking 'webmaster' as a string");
+  console.log(alpha("webmaster"));
+</script>
+TOPIC : Indexed Collection
+
+Consider input array and perform the array methods like pop(),Foreach(), etc..,.
+
+a)<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Array Methods</h2>
+<h2>pop()</h2>
+<p>The pop() method removes the last element from an array.</p>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+
+<script>
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo1").innerHTML = fruits;
+fruits.pop();
+document.getElementById("demo2").innerHTML = fruits;
+</script>
+
+</body>
+</html>
+b)<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Array Methods</h2> 
+<h2>push()</h2>
+<p>The push() method appends a new element to an array:</p>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+
+<script>
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo1").innerHTML = fruits;
+fruits.push("Kiwi");
+document.getElementById("demo2").innerHTML = fruits;
+</script>
+
+</body>
+</html>
+TOPIC : JSON
+
+Convert the following JSON into Vehicle Object
+
+Input :
+{ "name": "Toyota Rav4", "engine": "2.5L", "price": 32000 }
+Ans.)import json
+json_obj =  '{ "Name":"Toyota Rav4", "engine":"2.5L", "price":32000 }'
+python_obj = json.loads(json_obj)
+print("\nJSON data:")
+print(python_obj)
+print("\nName: ",python_obj["Name"])
+print("Class: ",python_obj["engine"])
+print("Age: ",python_obj[price"]) 
+TOPIC : Iterators & Generators
+
+Write a JavaScript program to build an array, using an iterator function and an initial seed value.
+
+Use a while loop and Array.prototype.push() to call the function repeatedly until it returns false.
+
+The iterator function accepts one argument (seed) and must always return an array with two elements (value, nextSeed) or false to terminate.
+const unfold = (fn, seed) => {
+  let result = [],
+    val = [null, seed];
+  while ((val = fn(val[1]))) result.push(val[0]);
+  return result;
+};
+var f = n => (n > 50 ? false : [-n, n + 10]);
+console.log(unfold(f, 10));
+TOPIC : Modules
+Write a module program by using import and export key words and rename the file name
+Ans.)
+     a)<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Modules</h1>
+
+<p id="demo"></p>
+
+<script type="module">
+import { name, age } from "./person.js";
+
+let text = "My name is " + name + ", I am " + age + ".";
+
+document.getElementById("demo").innerHTML = text
+</script>
+
+</body>
+</html>
+b)
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Modules</h1>
+
+<p id="demo"></p>
+
+<script type="module">
+import message from "./message.js";
+
+document.getElementById("demo").innerHTML = message();
+
+</script>
+
+</body>
+</html>
+TOPIC : Promises
+
+Write a program on Promise object is created that takes two functions: resolve() and reject().
+
+ resolve() is used if the process is successful and reject() is used
+ when an error occurs in the promise. 
+The promise is resolved if the value of count is true.
+Ans.)var promise = new Promise(function(resolve, reject) {
+  const x = "abcde";
+  const y = "abcde"
+  if(x === y) {
+    resolve();
+  } else {
+    reject();
+  }
+});
+   
+promise.
+    then(function () {
+        console.log('Success, It is true');
+    }).
+    catch(function () {
+        console.log('Some error has occurred');
+    });
